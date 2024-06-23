@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Bean;
 public class WireMockConfig {
     @Bean(initMethod = "start", destroyMethod = "stop")
     public WireMockServer poetrydbService() {
-        return new WireMockServer(80);
+        return new WireMockServer(8082);
     }
 }
