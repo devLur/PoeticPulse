@@ -12,7 +12,7 @@ brew install gradle
 
 run the following commands in this folder:  
 ```bash
-gradlew build
+./gradlew build
 ```
 
 It is recommended to install git hooks to make sure your code is tested before commiting anything. In order to do so execute:  
