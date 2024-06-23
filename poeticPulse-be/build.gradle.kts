@@ -15,6 +15,7 @@ sonar {
     property("sonar.projectKey", "devLur_PoeticPulse")
     property("sonar.organization", "devlur")
     property("sonar.host.url", "https://sonarcloud.io")
+  	property("sonar.tests", "src/test")
   }
 }
 
@@ -67,6 +68,7 @@ tasks.jacocoTestReport {
 	reports{
 		html.required = true
 		html.outputLocation = layout.buildDirectory.dir("reports/jacoco")
+		xml.required = true
 	}
 }
 
@@ -78,4 +80,13 @@ tasks.jacocoTestCoverageVerification{
 			}
 		}
 	}
+}
+
+tasks.sonar{
+	dependsOn("jacocoTestReport")
+}
+
+tasks.sonarqube{
+	dependsOn("jacocoTestReport")
+
 }
