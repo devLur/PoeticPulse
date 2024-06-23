@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:8080/suggestions';
+const baseUrl = process.env.REACT_APP_BACKEND_BASEURL + "/suggestions";
 
 const getRandom = async () => {
     const response = await axios.get(`${baseUrl}/random`);

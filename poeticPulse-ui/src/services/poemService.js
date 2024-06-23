@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:8080/poems';
+const baseUrl = process.env.REACT_APP_BACKEND_BASEURL + "/poems";
 
 const getAll = async () => {
   const response = await axios.get(baseUrl);

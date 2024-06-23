@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  mongoDB:
+    image: mongo:7.0
+    ports:
+      - 27017:27017
+    container_name: mongoDB
+
+  poeticpulse-be:
+    build:
+      context: ./poeticPulse-be
+      dockerfile: Dockerfile
+    links:
+      - mongoDB
+    ports:
+      - 8080:8080
+    container_name: "poeticpulse-be"
+    
+  
+  poeticpulse-ui:
+    build:
+      context: ./poeticPulse-ui
+      dockerfile: Dockerfile
+    links:
+      - poeticpulse-be
+    ports:
+      - 3000:3000
+    container_name: "poeticpulse-ui"

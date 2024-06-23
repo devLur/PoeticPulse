@@ -13,6 +13,12 @@ The Software is documented in the arc42 format. The documentation can be found [
 - `./doc` contains all documentation around PoeticPulse
 - `./poeticPulse-be` contains the backend application for PoeticPulse. Read the [README.md here](poeticPulse-be/README.md) on how to setup your dev environment
 - `./poeticPulse-fe` contains the frontend application for PoeticPulse Read the [README.md here](poeticPulse-ui/README.md) on how to setup your dev environment
+- `./.github/workflows` contains GitHub actions
 
+### Run application
 
+If you have Docker and Docker-compose installed, you can start the application with the command:  
+```bash
+docker-compose up
+```
 

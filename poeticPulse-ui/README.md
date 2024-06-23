@@ -19,6 +19,9 @@ Make Sure the dependent applications are available locally before running this a
 ```bash
 docker pull mongo:7.0
 docker run --name mongoDB -p 27017:27017 -d mongo:7.0
+
+docker pull build -t poeticpulse-be ../poeticpulse-be/
+docker run --name poeticpulse-be -p 8080:8080 -d poeticpulse-be
 ```
 
 ## Additionally, available Scripts
