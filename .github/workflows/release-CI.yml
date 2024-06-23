@@ -27,7 +27,7 @@ jobs:
         run: chmod +x ./poeticPulse-be/gradlew
       - name: Build with Gradle
         run: |
-          cp poeticPulse-be
+          cd poeticPulse-be
           ./gradlew build
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
