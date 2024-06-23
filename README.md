@@ -16,8 +16,10 @@ The Software is documented in the arc42 format. The documentation can be found [
 - `./.github/workflows` contains GitHub actions
 
 ### Run application
+**Prerequisites**:  
+follow the requirements sections in the README.md files of both Applications `./poeticPulse-be` and `./poeticPulse-fe`
 
-If you have Docker and Docker-compose installed, you can start the application with the command:  
+If you have Docker and Docker-Compose installed, you can simply start the application with the command:  
 ```bash
 docker-compose up
 ```
