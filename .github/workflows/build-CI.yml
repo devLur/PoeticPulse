@@ -1,0 +1,68 @@
+name: Build-CI
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  
+  build-be:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./poeticPulse-be
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v4
+    - name: Set up JDK 21
+      uses: actions/setup-java@v3
+      with:
+        java-version: 21
+        distribution: 'zulu' 
+    - name: Build with Gradle
+      run: ./gradlew build
+    - name: Cache Gradle packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: run Checkstyle on main files
+      run: ./gradlew checkstyleMain
+    - name: run Checkstyle on test files
+      run: ./gradlew checkstyleTest
+    - name: run Test coverage verification
+      run: ./gradlew jacocoTestCoverageVerification
+    - name: build
+      run: ./gradlew build
+  
+  build-ui:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./poeticPulse-ui
+    steps:
+    - name: Checkout poeticPulse-ui sources
+      uses: actions/checkout@v4
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: "20.15.0"
+    - name: Cache node modules dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install react app dependencies
+      run: npm i
+    - name: Build react app
+      run: npm run build
+      
