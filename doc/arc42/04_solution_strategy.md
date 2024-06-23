@@ -42,10 +42,7 @@ The Spring Boot Actuator is used to provide additional health endpoints.
 Wiremock is used to mock services to decrease dependency on external services.
 
 **Postman Collections**
-Postman Collection test runs are used to measure the response time. If the response time is not acceptable for a live demonstration (greater than 2 sec), the test fails.
+Postman Collections can be used to measure the response time.
 
 **Artillery**  
 Artillery is used to do a performance test to measure the systems performance under load.
-
-**Selenium**  
-Selenium is used to automate browser interactions with the frontend application.
