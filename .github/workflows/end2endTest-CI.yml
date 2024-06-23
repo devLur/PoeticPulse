@@ -49,5 +49,9 @@ jobs:
         uses: hoverkraft-tech/compose-action@v2.0.1
         with:
           compose-file: ".docker-compose.yml"
+      - name: Execute load tests
+        uses: artilleryio/action-cli@v1
+        with:
+          command: tests/performance/artilleryTest.yml
 
 
