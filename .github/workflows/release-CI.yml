@@ -20,8 +20,6 @@ jobs:
         uses: actions/checkout@v4                  
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-      - name: Checkout sources
-        uses: actions/checkout@v4
       - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
@@ -30,9 +28,9 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./poeticPulse-be/gradlew
       - name: Build with Gradle
-        run: ./poeticPulse-be/gradlew build
-      - name: Checkout poeticPulse-ui sources
-        uses: actions/checkout@v4
+        run: |
+          cp poeticPulse-be
+          ./gradlew build
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         with:
