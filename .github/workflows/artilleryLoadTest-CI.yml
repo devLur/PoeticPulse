@@ -1,4 +1,4 @@
-name: end2endTest-CI
+name: ArtilleryLoadTest-CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     - main
 
 jobs:
-  end2endTest:
+  ArtilleryLoadTest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
