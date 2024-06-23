@@ -13,8 +13,10 @@ jobs:
         include:
           - image: user/poeticpulse-be:latest
             dockerfile: poeticPulse-be/Dockerfile
+            subdir: poeticPulse-be
           - image: user/poeticpulse-ui:latest
             dockerfile: poeticPulse-ui/Dockerfile
+            subdir: poeticPulse-ui
     steps:
       - name: Checkout
         uses: actions/checkout@v4                  
@@ -56,7 +58,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: "{{defaultContext}}:${{ matrix.subdir }}"
           file: ${{ matrix.dockerfile }}
           push: true
           tags: ${{ matrix.image }}
