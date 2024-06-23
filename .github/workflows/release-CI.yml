@@ -6,8 +6,15 @@ on:
     - main
 
 jobs:
-  release:
+  dockerRelease:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - image: user/poeticpulse-be:latest
+            dockerfile: poeticPulse-be/Dockerfile
+          - image: user/poeticpulse-ui:latest
+            dockerfile: poeticPulse-ui/app1
     steps:                  
       -
         name: Set up QEMU
@@ -25,5 +32,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
+          file: ${{ matrix.dockerfile }}
           push: true
-          tags: user/poeticpulse:latest
+          tags: ${{ matrix.image }}
