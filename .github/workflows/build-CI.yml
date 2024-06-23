@@ -1,4 +1,4 @@
-name: Build-CI
+name: build-CI
 
 on:
   push:
@@ -23,6 +23,8 @@ jobs:
       with:
         java-version: 21
         distribution: 'zulu' 
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
     - name: Build with Gradle
       run: ./gradlew build
     - name: Cache Gradle packages
@@ -31,8 +33,6 @@ jobs:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
         restore-keys: ${{ runner.os }}-gradle
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
     - name: run Checkstyle on main files
       run: ./gradlew checkstyleMain
     - name: run Checkstyle on test files

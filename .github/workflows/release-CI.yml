@@ -1,10 +1,12 @@
-name:
+name: release-CI
+
 on:
   push:
     branches:
     - main
+
 jobs:
-  docker:
+  release:
     runs-on: ubuntu-latest
     steps:                  
       -
