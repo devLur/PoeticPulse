@@ -28,9 +28,9 @@ jobs:
           java-version: 21
           distribution: 'zulu' 
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x ./poeticPulse-be/gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./poeticPulse-be/gradlew build
       - name: Checkout poeticPulse-ui sources
         uses: actions/checkout@v4
       - name: Setup Node.js environment
@@ -45,7 +45,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install react app dependencies
-        run: npm i
+        run: |
+          cd poeticpulse-ui
+          npm i
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Login to Docker Hub
