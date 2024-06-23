@@ -58,7 +58,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:${{ matrix.subdir }}"
+          context: ${{ matrix.subdir }}
           file: ${{ matrix.dockerfile }}
           push: true
           tags: ${{ matrix.image }}
