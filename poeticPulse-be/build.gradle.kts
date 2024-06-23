@@ -2,12 +2,21 @@ plugins {
 	java
 	id("org.springframework.boot") version "3.2.4"
 	id("io.spring.dependency-management") version "1.1.4"
+	id("org.sonarqube") version "4.4.1.3373"
 	checkstyle
 	jacoco
 }
 
 group = "com.devlu"
 version = "0.0.1-SNAPSHOT"
+
+sonar {
+  properties {
+    property("sonar.projectKey", "devLur_PoeticPulse")
+    property("sonar.organization", "devlur")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
 
 checkstyle {
 	toolVersion = "10.17.0"
