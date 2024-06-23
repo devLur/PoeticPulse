@@ -12,10 +12,10 @@ jobs:
       matrix:
         include:
           - image: user/poeticpulse-be:latest
-            dockerfile: poeticPulse-be/Dockerfile
+            dockerfile: Dockerfile
             subdir: poeticPulse-be
           - image: user/poeticpulse-ui:latest
-            dockerfile: poeticPulse-ui/Dockerfile
+            dockerfile: Dockerfile
             subdir: poeticPulse-ui
     steps:
       - name: Checkout
