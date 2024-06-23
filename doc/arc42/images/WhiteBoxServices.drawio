@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" modified="2024-06-23T03:57:52.452Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="jMJEWT9oonxTWhId_pAW" version="24.6.2" type="device">
+  <diagram name="Seite-1" id="vO9bGe1PAfaSyUVrgkQa">
+    <mxGraphModel dx="1445" dy="1855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BdteyuvdXdqTVR_AdefD-1" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;clients&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="-220" width="380" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-2" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="BdteyuvdXdqTVR_AdefD-1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-38" value="models" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-90" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-41" value="" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BdteyuvdXdqTVR_AdefD-53" target="BdteyuvdXdqTVR_AdefD-38">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="80" y="-55" as="sourcePoint" />
+            <mxPoint x="5" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-44" value="PoetryClientBuilder" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-90" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-45" value="&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;div&gt;PoetryClient&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-46" value="" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="BdteyuvdXdqTVR_AdefD-44" target="BdteyuvdXdqTVR_AdefD-45">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-5" y="-80" as="sourcePoint" />
+            <mxPoint x="53" y="-120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-47" value="" style="edgeStyle=none;html=1;endArrow=block;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;entryX=0.986;entryY=0.664;entryDx=0;entryDy=0;entryPerimeter=0;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="174.69" y="-40" as="sourcePoint" />
+            <mxPoint x="174.69" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-48" value="" style="edgeStyle=none;html=1;endArrow=halfCircle;endSize=6;dashed=1;verticalAlign=bottom;rounded=0;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="174.69" y="10" as="sourcePoint" />
+            <mxPoint x="174.69" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-49" value="poetrydb API" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="BdteyuvdXdqTVR_AdefD-48">
+          <mxGeometry x="-0.4667" relative="1" as="geometry">
+            <mxPoint y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-53" value="DtoConverter" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-180" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BdteyuvdXdqTVR_AdefD-54" value="" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.889;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BdteyuvdXdqTVR_AdefD-45" target="BdteyuvdXdqTVR_AdefD-38">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-5" y="-120" as="sourcePoint" />
+            <mxPoint x="-5" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

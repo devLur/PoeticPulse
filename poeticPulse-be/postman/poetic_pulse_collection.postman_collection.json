@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "efe610d5-2830-4fcf-a0bc-2312d0df74aa",
+		"name": "poetic_pulse_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35115877"
+	},
+	"item": [
+		{
+			"name": "Poem CRUD requests",
+			"item": [
+				{
+					"name": "Create poem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"testPoemId\", responseData.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New created testPoem\",\n    \"lines\": [\n        {\n            \"line\": \"Lorem ipsum dolor sit amet\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"consetetur sadipscing elitr\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"sed diam voluptua\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/poems",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get poem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/poems/{{testPoemId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems",
+								"{{testPoemId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update poem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New updated testPoem\",\n    \"lines\": [\n        {\n            \"line\": \"Lorem ipsum dolor sit amet\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"consetetur sadipscing elitr\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        },\n        {\n            \"line\": \"sed diam voluptua\",\n            \"author\": \"Max Musterman\",\n            \"title\": \"Lorem Ipsum\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/poems/{{testPoemId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems",
+								"{{testPoemId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get updated poem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/poems/{{testPoemId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems",
+								"{{testPoemId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all poems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/poems",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete poem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/poems/{{testPoemId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"poems",
+								"{{testPoemId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suggestion requests",
+			"item": [
+				{
+					"name": "Get suggestion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/suggestions/random",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suggestions",
+								"random"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actuator requests",
+			"item": [
+				{
+					"name": "Get health status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/actuator/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get advanced health status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/actuator/health/custom",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"actuator",
+								"health",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

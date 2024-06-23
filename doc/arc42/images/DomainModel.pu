@@ -1,0 +1,38 @@
+@startuml domainmodel
+
+package poeticpulse.models {
+    class Poem {
+        -String id
+        -String title
+        -List<PoemLine> lines
+
+        +Poem(String title, List<PoemLine> lines)
+        +Poem(String title, String author, List<String> lines)
+        +Poem()
+        +String getId()
+        +String getTitle()
+        +List<PoemLine> getLines()
+        +void setTitle(String title)
+        +void setLines(List<PoemLine> lines)
+        +boolean equals(Object o)
+        +int hashCode()
+    }
+
+    class PoemLine {
+        -String id
+        -String line
+        -String author
+        -String title
+
+        +PoemLine(String line, String author, String title)
+        +String getLine()
+        +String getAuthor()
+        +String getTitle()
+        +boolean equals(Object o)
+        +int hashCode()
+    }
+
+    Poem "1" -- "0..*" PoemLine
+}
+
+@enduml

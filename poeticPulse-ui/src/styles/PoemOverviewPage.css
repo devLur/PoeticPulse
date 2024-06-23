@@ -1,0 +1,30 @@
+ul#nav li:hover,ul#nav li.active a{
+    color: #f4ba51;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul#nav li.selected:hover,ul#nav li.active a{
+    color:blue;
+}
+
+.selected{
+    color:blue;
+}
+
+.title{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.overviewBox{
+    margin: 5px 5px 5px 5px;
+}
+
+.spacing{
+    margin-bottom: 5px;
+}
+
+#nav{
+    margin-top: 0px;
+}

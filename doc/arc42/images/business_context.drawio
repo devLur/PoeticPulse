@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2024-06-22T22:42:47.197Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="gg_-NBQzHB4WNqH4TrBq" version="24.6.2" type="device">
+  <diagram name="Seite-1" id="vO9bGe1PAfaSyUVrgkQa">
+    <mxGraphModel dx="1509" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;margin-left:10px;text-align:left;&quot;&gt;&lt;b&gt;Business Context&lt;/b&gt;&lt;/p&gt;" style="html=1;shape=mxgraph.sysml.package;labelX=123.17;align=left;spacingLeft=10;overflow=fill;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="160" width="670" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-7" value="&lt;b&gt;Poet&lt;/b&gt;" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="36" y="95" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-12" value="View, create, update and&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;delete poems&lt;/span&gt;&lt;/div&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;edgeStyle=none;endArrow=open;dashed=1;verticalAlign=top;labelBackgroundColor=none;endSize=12;html=1;rounded=0;entryX=-0.01;entryY=0.376;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="66" y="124.66" as="sourcePoint" />
+            <mxPoint x="213.79999999999995" y="124.77999999999989" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-3" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=rect;fontStyle=1;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="216" y="70" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-13" value="PoeticPulse" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=rect;fontStyle=1;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="216" y="40" width="96" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-26" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="236" y="85" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-27" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="236" y="115" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-28" value="PoeticPulse-ui" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="256" y="110" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-29" value="PoeticPulse-be" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="256" y="80" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-30" value="poetrydb.org" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=rect;fontStyle=1;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry x="510" y="95" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Xoc5ZM0ziYuFofzknt8c-32" value="Fetch poem&lt;div&gt;suggestions&lt;/div&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;edgeStyle=none;endArrow=open;dashed=1;verticalAlign=top;labelBackgroundColor=none;endSize=12;html=1;rounded=0;" edge="1" parent="Xoc5ZM0ziYuFofzknt8c-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="436" y="124.66000000000003" as="sourcePoint" />
+            <mxPoint x="510" y="125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

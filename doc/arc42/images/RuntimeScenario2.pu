@@ -1,0 +1,23 @@
+@startuml scenario2
+actor "Poet (via Browser)" as Poet
+participant "PoeticPulse-ui" as UI
+participant "PoeticPulse-be" as BE
+participant "poetrydb" as PD
+
+Poet --> UI : opens PoemPage \n(views suggestion poem)
+activate UI
+
+UI -> BE : requests random \npoem suggestion
+activate BE
+
+BE -> PD : fetches random \npublic poem
+activate PD
+
+PD -> BE: response
+deactivate PD
+
+BE -> UI : response
+deactivate BE
+
+UI -> Poet : response
+deactivate UI

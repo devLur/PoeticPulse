@@ -1,0 +1,23 @@
+@startuml scenario1
+actor "Poet(via Browser)" as Poet
+participant "PoeticPulse-ui" as UI
+participant "PoeticPulse-be" as BE
+participant "Database" as DB
+
+Poet --> UI : views, creates, updates, \nor deletes a poem
+activate UI
+
+UI -> BE : requests poem \naction
+activate BE
+
+BE -> DB : queries poem \naction
+activate DB
+
+DB -> BE : response
+deactivate DB
+
+BE -> UI : response
+deactivate BE
+
+UI -> Poet : response
+deactivate UI
